@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8">
+  <title>my space</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <h1>KARTHIK D</h1>
+      <p>GLOBAL BUSINESS ADVISOR • AUTHOR • SPEAKER</p>
+    </div>
+    <nav class="navbar">
+      <ul>
+       <li><a href="My Blog.html" >HOME</a></li>
+        <li><a href="blog.html " class="active">BLOG</a></li>
+        <!-- <li><a href="#">ABOUT</a></li> -->
+        <li><a href="#">BOOKS</a></li>
+        <li><a href="#">PRESS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>NAA ESTAM</h1>
+
+    <form id="blogForm">
+      <input type="text" id="title" placeholder="HEADING..." required>
+      <textarea id="content" rows="5" placeholder="MIND LO DHI RAI..." required></textarea>
+      <button type="submit">save</button>
+    </form>
+
+    <div id="entries"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById('blogForm');
+    const titleInput = document.getElementById('title');
+    const contentInput = document.getElementById('content');
+    const entriesDiv = document.getElementById('entries');
+
+    let editIndex = -1;
+
+    function loadEntries() {
+      const entries = JSON.parse(localStorage.getItem('blogEntries') || '[]');
+      entriesDiv.innerHTML = "";
+
+      entries.forEach((entry, index) => {
+        const card = document.createElement('div');
+        card.className = 'entry';
+
+        card.innerHTML = `
+          <h2>${entry.title}</h2>
+          <p>${entry.content}</p>
+          <div class="buttons">
+            <button onclick="editEntry(${index})">✏️ ADD </button>
+            <button onclick="deleteEntry(${index})">🗑️ MINGIDENGU</button>
+          </div>
+        `;
+        entriesDiv.appendChild(card);
+      });
+    }
+
+    function editEntry(index) {
+      const entries = JSON.parse(localStorage.getItem('blogEntries') || '[]');
+      titleInput.value = entries[index].title;
+      contentInput.value = entries[index].content;
+      editIndex = index;
+    }
+
+    function deleteEntry(index) {
+      const entries = JSON.parse(localStorage.getItem('blogEntries') || '[]');
+      entries.splice(index, 1);
+      localStorage.setItem('blogEntries', JSON.stringify(entries));
+      loadEntries();
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const title = titleInput.value.trim();
+      const content = contentInput.value.trim();
+
+      if (!title || !content) {
+        alert('MIND LODHI RAI');
+        return;
+      }
+
+      let entries = JSON.parse(localStorage.getItem('blogEntries') || '[]');
+
+      if (editIndex >= 0) {
+        entries[editIndex] = { title, content };
+        editIndex = -1;
+      } else {
+        entries.push({ title, content });
+      }
+
+      localStorage.setItem('blogEntries', JSON.stringify(entries));
+
+      // ✅ Clear form and reset
+      form.reset();
+      titleInput.blur();
+      contentInput.blur();
+      editIndex = -1;
+
+      loadEntries();
+    });
+
+    loadEntries(); // Load existing on page load
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8">
+  <title>home</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    button {
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #f8b500;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #155ee0;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <h1>KARTHIK D</h1>
+      <p>GLOBAL BUSINESS ADVISOR • AUTHOR • SPEAKER</p>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#" class="active">HOME</a></li>
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="#">BOOKS</a></li>
+        <li><a href="#">PRESS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content-section bordered-box">
+    <div class="left-image">
+      <img src="images/team.png" alt="Team Image">
+    </div>
+    <div class="right-text" id="content-text">
+      <h2>ఒక మనిషి – అనుభూతుల గజిబిజి</h2>
+      <p>
+        ఒక మనిషిలో రెండు ప్రపంచాలు ఉంటాయి...<br>
+        ఒక్క చూపులో నవ్వు – ఇంకొక చూపులో కోపం.<br>
+        మనసులో అలజడి, ముఖంలో నమ్మకం.<br>
+        అతడు అంత తేలికైన వాడికాడు.<br>
+        నవ్వుతున్నా… లోపల ఆర్తి ఉంది.<br>
+        కోపంగా కనిపించినా… ప్రేమ ఉంది.<br>
+        ప్రతి మాట వెనుక ఒక బాధ.<br>
+        ప్రతి మౌనంలో ఒక కథ.<br>
+        తనను ఎవరూ పూర్తిగా చదవలేరు.<br>
+        తాను కూడా తన్ను పూర్తిగా అర్థం చేసుకోలేదు.<br>
+        గుండెలో గాయం, నాలుకపై నవ్వు.<br>
+        కళ్లలో నీరు, కాలంతో పోరాటం.<br>
+        నిజాలు మాట్లాడే వాడే కష్టం పడతాడు.<br>
+        చీప్ నవ్వుల వెనుక దీర్ఘమైన ఓదార్పు.<br>
+        మనిషి అంతే – మయూరం లాంటి రంగులు, నిదురలేని కన్నీళ్ళు.<br>
+        ఏ మలుపులో తన భావాలు మారతాయో తెలియదు.<br>
+        ప్రేమిస్తాడు – తిట్టాడు – తిరిగి నవ్విస్తాడు.<br>
+        తనలో ఒకటి కాదు, వంద మూడ్‌లు ఉన్నాయి.<br>
+        ఆ మనిషిని చిన్న చూపు కాదు…<br>
+        ఓ జ్ఞాపకం పెట్టుకో... అతడు ఒక ప్రపంచం.
+      </p>
+
+      <!-- 🔘 Button BELOW content -->
+      <div style="margin-top: 20px;">
+        <button onclick="toggleLanguage()">Translate to English</button>
+      </div>
+    </div>
+  </main>
+
+  <section class="contact-section">
+    <h2 class="contact">Contact Me</h2>
+    <ul>
+      <li><strong>Name:</strong> Avaru pelaavaru, vallaki nachindhi pelustharu ani</li><br>
+      <li><strong>Email:</strong> naukari ke, credit cards ke tappa deneke no use @gmail.com</li><br>
+      <li><strong>Phone:</strong> Asalu daridram edy</li><br>
+      <li><strong>Location:</strong> Avareke teliyali place</li><br>
+      <li><strong>About:</strong> Overacting, over imagination</li><br>
+    </ul>
+  </section>
+
+  <script>
+    let isTelugu = true;
+
+    function toggleLanguage() {
+      const content = document.getElementById('content-text');
+      const buttonText = isTelugu ? "Translate to Telugu" : "Translate to English";
+
+      const english = `
+        <h2>One Man – A Storm of Emotions</h2>
+        <p>
+          A man holds two worlds inside...<br>
+          A smile in one glance – anger in another.<br>
+          Turmoil in the mind, trust on the face.<br>
+          He is not a simple person.<br>
+          Even when smiling… there's pain inside.<br>
+          Appears angry… yet carries love.<br>
+          Behind every word, there's pain.<br>
+          In every silence, there's a story.<br>
+          No one can completely understand him.<br>
+          He himself doesn't fully understand who he is.<br>
+          A wound in the heart, a smile on the lips.<br>
+          Tears in the eyes, a fight with time.<br>
+          The one who speaks truth suffers more.<br>
+          Behind cheap smiles, lies deep comfort.<br>
+          A human is like that – colorful like a peacock, sleepless with tears.<br>
+          You never know when his emotions change.<br>
+          He loves – gets angry – and smiles again.<br>
+          He doesn't have just one mood, he has a hundred.<br>
+          Never look down on such a person...<br>
+          Just remember – he is a world by himself.
+        </p>
+        <div style="margin-top: 20px;">
+          <button onclick="toggleLanguage()">Translate to Telugu</button>
+        </div>
+      `;
+
+      const telugu = `
+        <h2>ఒక మనిషి – అనుభూతుల గజిబిజి</h2>
+        <p>
+          ఒక మనిషిలో రెండు ప్రపంచాలు ఉంటాయి...<br>
+          ఒక్క చూపులో నవ్వు – ఇంకొక చూపులో కోపం.<br>
+          మనసులో అలజడి, ముఖంలో నమ్మకం.<br>
+          అతడు అంత తేలికైన వాడికాడు.<br>
+          నవ్వుతున్నా… లోపల ఆర్తి ఉంది.<br>
+          కోపంగా కనిపించినా… ప్రేమ ఉంది.<br>
+          ప్రతి మాట వెనుక ఒక బాధ.<br>
+          ప్రతి మౌనంలో ఒక కథ.<br>
+          తనను ఎవరూ పూర్తిగా చదవలేరు.<br>
+          తాను కూడా తన్ను పూర్తిగా అర్థం చేసుకోలేదు.<br>
+          గుండెలో గాయం, నాలుకపై నవ్వు.<br>
+          కళ్లలో నీరు, కాలంతో పోరాటం.<br>
+          నిజాలు మాట్లాడే వాడే కష్టం పడతాడు.<br>
+          చీప్ నవ్వుల వెనుక దీర్ఘమైన ఓదార్పు.<br>
+          మనిషి అంతే – మయూరం లాంటి రంగులు, నిదురలేని కన్నీళ్ళు.<br>
+          ఏ మలుపులో తన భావాలు మారతాయో తెలియదు.<br>
+          ప్రేమిస్తాడు – తిట్టాడు – తిరిగి నవ్విస్తాడు.<br>
+          తనలో ఒకటి కాదు, వంద మూడ్‌లు ఉన్నాయి.<br>
+          ఆ మనిషిని చిన్న చూపు కాదు…<br>
+          ఓ జ్ఞాపకం పెట్టుకో... అతడు ఒక ప్రపంచం.
+        </p>
+        <div style="margin-top: 20px;">
+          <button onclick="toggleLanguage()">Translate to English</button>
+        </div>
+      `;
+
+      content.innerHTML = isTelugu ? english : telugu;
+      isTelugu = !isTelugu;
+    }
+  </script>
+</body>
+</html>

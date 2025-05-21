@@ -1,0 +1,234 @@
+/* General Body Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Header Section */
+.main-header {
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+}
+
+.logo h1 {
+  color: #e50914;
+  margin: 0;
+  font-size: 28px;
+}
+
+.logo p {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  color: #ccc;
+  letter-spacing: 1px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #e50914;
+}
+
+/* ✅ Bordered Content Box */
+.bordered-box {
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 0;
+  background-color: #f9f9f9;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  margin: 40px;
+}
+
+/* ✅ Main Content Section */
+.content-section {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+  padding: 30px;
+  justify-content: center;
+  align-items: stretch; /* same height for both */
+}
+
+.left-image, .right-text {
+  flex: 1;
+  max-width: 50%;
+}
+
+.left-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* ✅ Right side text */
+.right-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.right-text h2 {
+  color: #e50914;
+  margin-bottom: 15px;
+}
+
+.right-text p {
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* ✅ Contact Section */
+.contact-section {
+  background-color: #000;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 1500px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(37, 5, 182, 0.1);
+  color: #ccc;
+}
+
+.contact-section ul {
+  list-style: none;
+  padding: 0;
+  font-size: 20px;
+  line-height: 0.8;
+}
+
+.contact {
+  text-align: center;
+  color: #ccc;
+}
+
+.contact-section li {
+  margin-bottom: 10px;
+}
+
+.contact-section a {
+  color: #11bce56e;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+
+                              /* blog page css */
+
+                              body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fceabb, #f8b500);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #d03801;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+input, textarea {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #ffaf36;
+  background: #fffef9;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #ff8400;
+  background-color: #fff3e0;
+}
+
+button[type="submit"] {
+  padding: 12px;
+  font-size: 18px;
+  background: #ff6b00;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #d65100;
+}
+
+.entry {
+  background: #fffaf0;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #ff6b00;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.entry h2 {
+  margin-top: 0;
+  color: #c0392b;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+.buttons button {
+  padding: 6px 12px;
+  margin-right: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #eee;
+}
+
+.buttons button:hover {
+  background-color: #ffd7a0;
+}
+
+
+                              

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8">
+  <title>my blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <h1>KARTHIK D</h1>
+      <p>GLOBAL BUSINESS ADVISOR • AUTHOR • SPEAKER</p>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="My Blog.html">HOME</a></li>
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="#">BOOKS</a></li>
+        <li><a href="#">PRESS</a></li>
+        <li><a href="contact.html" class="active">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content-section">
+    <h2>Contact Me</h2>
+    <form action="https://formsubmit.co/hajarath0505@gmail.com" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+
+      <!-- Hidden Config -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="success.html">
+
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+</body>
+</html>
